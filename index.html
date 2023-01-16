@@ -34,9 +34,10 @@
 <body>
     <section>
         <h1>Contador</h1>
-        <p></p>
+        <p id="resultado"></p>
         <button onclick="diminuir()">menos</button>
         <button onclick="aumentar()">mais</button>
+        <button onclick="zerar()">zerar</button>
     </section>
     <script>
 
@@ -44,18 +45,27 @@
 
         function diminuir() {
             numero = numero - 1
-            mostrarNaTela()
+            mostrarNaTela ()
+           
         }
 
         function aumentar() {
             numero = numero + 1
-            mostrarNaTela()
+            mostrarNaTela ()
+            
+        }
+
+        function zerar() {
+            numero = numero - numero
+            mostrarNaTela () 
+           
         }
 
         function mostrarNaTela() {
             const p = document.querySelector("p")
             p.innerText = numero
         }
+         
     </script>
 </body>
 
